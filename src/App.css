@@ -421,6 +421,10 @@
   width: 100%;
 }
 
+.flow-exit {
+  grid-column: 3 / span 1;
+}
+
 .tag {
   padding: 8px 10px;
   background: #ffffff;
@@ -452,6 +456,10 @@
 .flow-fill {
   grid-column: 1 / span 1;
   width: 100%;
+}
+
+.flow-fill--closing {
+  grid-column: 4 / span 1;
 }
 
 .flow-position-row {

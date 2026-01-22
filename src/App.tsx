@@ -139,7 +139,7 @@ function App() {
                     <div className="ltf-bar">
                       <div className="ltf-bar__title">Bar L + 1</div>
                       <div className="ltf-cells">
-                        <span className="ltf-cell">O</span>
+                        <span className="ltf-cell ltf-cell--open">O</span>
                         <span className="ltf-cell">H</span>
                         <span className="ltf-cell">L</span>
                         <span className="ltf-cell ltf-cell--close">C</span>
@@ -447,16 +447,23 @@ function App() {
             <div className="flow-slot" />
             <div className="flow-slot">
               <div className="flow-cells">
-                <div className="tag tag--entry flow-entry">strategy.exit()</div>
-              </div>
-            </div>
-            <div className="flow-slot">
-              <div className="flow-cells">
-                <div className="tag tag--fill flow-fill">
+                <div
+                  className={`tag tag--entry flow-entry ${
+                    isMagnifier ? 'flow-exit' : ''
+                  }`}
+                >
+                  strategy.exit()
+                </div>
+                <div
+                  className={`tag tag--fill flow-fill ${
+                    isMagnifier ? 'flow-fill--closing' : ''
+                  }`}
+                >
                   Filled with open price
                 </div>
               </div>
             </div>
+            <div className="flow-slot" />
             <div className="flow-slot" />
           </div>
 
