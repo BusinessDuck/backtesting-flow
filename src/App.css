@@ -490,7 +490,7 @@
 .flow-position--closing {
   grid-column: 1 / span 2;
   margin-left: 0;
-  width: calc(100% + 15px);
+  width: calc(100% - 15px);
 }
 
 

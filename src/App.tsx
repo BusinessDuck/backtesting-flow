@@ -333,7 +333,7 @@ function App() {
                     <div className="ltf-bar">
                       <div className="ltf-bar__title">Bar L + 1</div>
                       <div className="ltf-cells">
-                        <span className="ltf-cell">O</span>
+                        <span className="ltf-cell ltf-cell--open">O</span>
                         <span className="ltf-cell">H</span>
                         <span className="ltf-cell">L</span>
                         <span className="ltf-cell ltf-cell--close">C</span>
@@ -364,7 +364,7 @@ function App() {
                     <div className="ltf-bar">
                       <div className="ltf-bar__title">Bar L + 2</div>
                       <div className="ltf-cells">
-                        <span className="ltf-cell ltf-cell--open">O</span>
+                        <span className="ltf-cell">O</span>
                         <span className="ltf-cell">H</span>
                         <span className="ltf-cell">L</span>
                         <span className="ltf-cell ltf-cell--close">C</span>
