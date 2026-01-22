@@ -108,7 +108,9 @@ function App() {
                 <div className="bar__subtitle">Main chart bars timeline bar</div>
               )}
               <div className="bar__cells">
-                <div className="cell">Open</div>
+                <div className={`cell ${isMagnifier ? '' : 'cell--open'}`}>
+                  Open
+                </div>
                 <div className="cell">High</div>
                 <div className="cell">Low</div>
                 <div className={`cell ${isMagnifier ? '' : 'cell--highlight'}`}>
@@ -156,7 +158,9 @@ function App() {
                 <div className="bar__subtitle">Main chart bars timeline bar</div>
               )}
               <div className="bar__cells">
-                <div className="cell">Open</div>
+                <div className={`cell ${isMagnifier ? '' : 'cell--open'}`}>
+                  Open
+                </div>
                 <div className="cell">High</div>
                 <div className="cell">Low</div>
                 <div className={`cell ${isMagnifier ? '' : 'cell--highlight'}`}>
@@ -454,21 +458,35 @@ function App() {
                 >
                   strategy.exit()
                 </div>
-                <div
-                  className={`tag tag--fill flow-fill ${
-                    isMagnifier ? 'flow-fill--closing' : ''
-                  }`}
-                >
-                  Filled with open price
-                </div>
+                {isMagnifier && (
+                  <div className="tag tag--fill flow-fill flow-fill--closing">
+                    Filled with open price
+                  </div>
+                )}
               </div>
             </div>
-            <div className="flow-slot" />
+            <div className="flow-slot">
+              {!isMagnifier && (
+                <div className="flow-cells">
+                  <div className="tag tag--fill flow-fill">Filled with open price</div>
+                </div>
+              )}
+            </div>
             <div className="flow-slot" />
           </div>
 
-          <div className="flow-position-row flow-position-row--closing">
-            <div className="flow-position flow-position--closing">Position</div>
+          <div
+            className={`flow-position-row flow-position-row--closing ${
+              isMagnifier ? '' : 'flow-position-row--closing-ohlc'
+            }`}
+          >
+            <div
+              className={`flow-position flow-position--closing ${
+                isMagnifier ? '' : 'flow-position--closing-ohlc'
+              }`}
+            >
+              Position
+            </div>
           </div>
         </section>
       </main>

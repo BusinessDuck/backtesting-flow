@@ -490,7 +490,16 @@
 .flow-position--closing {
   grid-column: 1 / span 2;
   margin-left: 0;
-  width: calc(100% - 15px);
+  width: 100%;
+}
+
+.flow-position-row--closing-ohlc {
+  grid-template-columns: 1.1fr 3.4fr 0.85fr 2.55fr 1.1fr;
+}
+
+.flow-position--closing-ohlc {
+  grid-column: 1 / span 3;
+  width: 100%;
 }
 
 
